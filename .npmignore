@@ -1,0 +1,8 @@
+icons
+source
+scripts
+node_modules
+documentation
+
+.eslintrc
+.prettierrc

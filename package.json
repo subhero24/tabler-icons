@@ -1,0 +1,28 @@
+{
+	"name": "tabler-icons",
+	"version": "0.0.1",
+	"description": "Tabler icons as react components",
+	"type": "module",
+	"main": "build/index.js",
+	"source": "source/index.js",
+	"types": "build/index.d.ts",
+	"scripts": {
+		"lint": "eslint source --max-warnings 0",
+		"build": "esbuild source/index.js --outfile=build/index.js --bundle --format=esm --minify --sourcemap --external:react",
+		"download": "node scripts/download.js",
+		"generate": "node scripts/generate.js",
+		"prepare": "npm run build && cp source/index.d.ts build/index.d.ts"
+	},
+	"keywords": [],
+	"author": "Bruno Van Damme",
+	"license": "MIT",
+	"devDependencies": {
+		"@svgr/core": "^6.2.1",
+		"camelcase": "^6.3.0",
+		"esbuild": "^0.14.42",
+		"eslint": "^8.16.0",
+		"fs-extra": "^10.1.0",
+		"prettier": "^2.6.2",
+		"puppeteer": "^14.1.1"
+	}
+}
